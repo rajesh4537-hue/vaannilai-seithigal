@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { MapPin, Clock, Calendar, Map } from 'lucide-react';
 import Header from '../components/Header';
 import CurrentWeather from '../components/CurrentWeather';
 import MinuteCast from '../components/MinuteCast';
