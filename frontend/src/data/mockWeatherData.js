@@ -64,18 +64,45 @@ export const dailyForecast = [
 ];
 
 export const airQuality = {
-  index: 42,
-  level: "Good",
-  description: "Air quality is satisfactory for most people"
+  index: 156,
+  level: "Unhealthy",
+  description: "Air quality is unhealthy for sensitive groups. Active people should limit outdoor exercise."
 };
 
 export const locations = [
-  "New York, NY",
-  "Los Angeles, CA", 
-  "Chicago, IL",
-  "Houston, TX",
-  "Miami, FL",
-  "London, UK",
-  "Paris, France",
-  "Tokyo, Japan"
+  "Chennai, Tamil Nadu",
+  "Mumbai, Maharashtra",
+  "Bangalore, Karnataka", 
+  "Hyderabad, Telangana",
+  "Kolkata, West Bengal",
+  "Delhi, NCR",
+  "Pune, Maharashtra",
+  "Coimbatore, Tamil Nadu",
+  "Madurai, Tamil Nadu",
+  "Trichy, Tamil Nadu",
+  "Salem, Tamil Nadu",
+  "Kochi, Kerala",
+  "Thiruvananthapuram, Kerala"
 ];
+
+export const monsoonAlert = {
+  active: true,
+  title: "Northeast Monsoon Alert",
+  description: "Heavy to very heavy rainfall expected across Tamil Nadu and Puducherry",
+  severity: "Orange",
+  validUntil: "Nov 25, 2025 6:00 PM IST"
+};
+
+export const cycloneWatch = {
+  active: false,
+  name: "",
+  status: "No active cyclonic activity in Bay of Bengal"
+};
+
+export const heatWave = {
+  active: true,
+  title: "Heat Wave Warning",
+  description: "Maximum temperatures likely to be 3-5°C above normal",
+  severity: "Yellow",
+  validUntil: "Oct 28, 2025 6:00 PM IST"
+};
