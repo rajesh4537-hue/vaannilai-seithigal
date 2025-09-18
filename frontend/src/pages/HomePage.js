@@ -12,12 +12,20 @@ import { currentWeather, minuteCast, hourlyForecast, dailyForecast, airQuality, 
 
 const HomePage = () => {
   const [selectedLocation, setSelectedLocation] = useState(currentWeather.location);
+  const [activeTab, setActiveTab] = useState('current');
 
   const handleLocationChange = (newLocation) => {
     setSelectedLocation(newLocation);
     // In a real app, this would trigger new weather data fetch
     console.log('Location changed to:', newLocation);
   };
+
+  const tabs = [
+    { id: 'current', name: 'Current Weather', icon: MapPin },
+    { id: 'hourly', name: 'Hourly', icon: Clock },
+    { id: 'daily', name: 'Daily', icon: Calendar },
+    { id: 'districts', name: 'Districts', icon: Map }
+  ];
 
   return (
     <div className="min-h-screen bg-gray-50">
