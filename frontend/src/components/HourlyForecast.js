@@ -27,7 +27,7 @@ const HourlyForecast = ({ forecast }) => {
 
               {/* Temperature */}
               <span className="text-lg font-semibold text-gray-900 whitespace-nowrap">
-                {item.temp}°
+                {item.temp}°C
               </span>
 
               {/* Precipitation */}
