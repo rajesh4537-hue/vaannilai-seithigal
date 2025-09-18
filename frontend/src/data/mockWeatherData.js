@@ -31,18 +31,18 @@ export const minuteCast = {
 };
 
 export const hourlyForecast = [
-  { time: "2 PM", temp: 72, condition: "Partly Cloudy", precipitation: 10, icon: "partly-cloudy" },
-  { time: "3 PM", temp: 74, condition: "Light Rain", precipitation: 80, icon: "light-rain" },
-  { time: "4 PM", temp: 73, condition: "Light Rain", precipitation: 75, icon: "light-rain" },
-  { time: "5 PM", temp: 71, condition: "Cloudy", precipitation: 20, icon: "cloudy" },
-  { time: "6 PM", temp: 69, condition: "Partly Cloudy", precipitation: 5, icon: "partly-cloudy" },
-  { time: "7 PM", temp: 67, condition: "Clear", precipitation: 0, icon: "clear" },
-  { time: "8 PM", temp: 65, condition: "Clear", precipitation: 0, icon: "clear" },
-  { time: "9 PM", temp: 63, condition: "Clear", precipitation: 0, icon: "clear" },
-  { time: "10 PM", temp: 61, condition: "Clear", precipitation: 0, icon: "clear" },
-  { time: "11 PM", temp: 59, condition: "Clear", precipitation: 0, icon: "clear" },
-  { time: "12 AM", temp: 57, condition: "Clear", precipitation: 0, icon: "clear" },
-  { time: "1 AM", temp: 56, condition: "Clear", precipitation: 0, icon: "clear" }
+  { time: "2 PM", temp: 32, condition: "Sunny", precipitation: 5, icon: "sunny" },
+  { time: "3 PM", temp: 33, condition: "Monsoon Rain", precipitation: 85, icon: "rain" },
+  { time: "4 PM", temp: 30, condition: "Heavy Rain", precipitation: 90, icon: "rain" },
+  { time: "5 PM", temp: 28, condition: "Thunderstorms", precipitation: 75, icon: "thunderstorms" },
+  { time: "6 PM", temp: 29, condition: "Light Rain", precipitation: 40, icon: "light-rain" },
+  { time: "7 PM", temp: 28, condition: "Partly Cloudy", precipitation: 15, icon: "partly-cloudy" },
+  { time: "8 PM", temp: 27, condition: "Cloudy", precipitation: 10, icon: "cloudy" },
+  { time: "9 PM", temp: 26, condition: "Partly Cloudy", precipitation: 5, icon: "partly-cloudy" },
+  { time: "10 PM", temp: 26, condition: "Clear", precipitation: 0, icon: "clear" },
+  { time: "11 PM", temp: 25, condition: "Clear", precipitation: 0, icon: "clear" },
+  { time: "12 AM", temp: 25, condition: "Clear", precipitation: 0, icon: "clear" },
+  { time: "1 AM", temp: 24, condition: "Clear", precipitation: 0, icon: "clear" }
 ];
 
 export const dailyForecast = [
