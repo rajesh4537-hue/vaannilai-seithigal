@@ -1,19 +1,19 @@
 // Mock weather data for Vaannilai Seithigal - Tamil Nadu focus
 export const currentWeather = {
   location: "Madurai, Tamil Nadu",
-  temperature: 35,
-  realFeel: 42,
-  condition: "Very Hot & Dry",
-  icon: "sunny",
-  humidity: 45,
-  windSpeed: 6,
-  windDirection: "NW",
-  pressure: 29.85,
-  uvIndex: 12,
-  visibility: 12,
-  dewPoint: 22,
-  cloudCover: 15,
-  heatIndex: 45
+  temperature: 28,
+  realFeel: 32,
+  condition: "Light Rain",
+  icon: "light-rain",
+  humidity: 88,
+  windSpeed: 15,
+  windDirection: "SW",
+  pressure: 29.72,
+  uvIndex: 3,
+  visibility: 6,
+  dewPoint: 26,
+  cloudCover: 85,
+  heatIndex: 32
 };
 
 export const minuteCast = {
