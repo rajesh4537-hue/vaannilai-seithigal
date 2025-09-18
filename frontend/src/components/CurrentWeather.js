@@ -71,7 +71,7 @@ const CurrentWeather = ({ weather }) => {
               <Eye className="h-4 w-4 text-blue-600" />
               <span className="text-sm font-medium text-gray-700">Visibility</span>
             </div>
-            <p className="text-lg font-semibold text-gray-900">{weather.visibility} mi</p>
+            <p className="text-lg font-semibold text-gray-900">{weather.visibility} km</p>
           </div>
 
           <div className="bg-white/50 rounded-lg p-4">
