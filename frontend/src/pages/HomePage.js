@@ -212,13 +212,13 @@ const HomePage = () => {
       <footer className="bg-white border-t border-gray-200 mt-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="text-center text-sm text-gray-500">
-            <p>© 2025 WeatherMantra Tamil Nadu. வானிலை அறிவோம், வாழ்வை மேம்படுத்துவோம்.</p>
-            <p className="mt-1">Exclusively designed for Tamil Nadu's 38 districts and unique weather patterns.</p>
+            <p>© 2025 Vaannilai Seithigal (வானிலை செய்திகள்). வானிலை அறிவோம், வாழ்வை மேம்படுத்துவோம்.</p>
+            <p className="mt-1">தமிழ்நாட்டின் 38 மாவட்டங்களுக்கான சிறப்பு வானிலை தகவல் மையம்.</p>
             <div className="mt-3 flex justify-center items-center space-x-6 text-xs">
-              <span>🏛️ Licensed by IMD</span>
-              <span>🌊 Bay of Bengal Monitoring</span>
-              <span>🌾 Agricultural Forecasts</span>
-              <span>📱 Tamil Language Support</span>
+              <span>🏛️ IMD அங்கீகாரம்</span>
+              <span>🌊 வங்கக்கடல் கண்காணிப்பு</span>
+              <span>🌾 விவசாய ஆலோசனை</span>
+              <span>📱 முழு தமிழ் ஆதரவு</span>
             </div>
           </div>
         </div>
