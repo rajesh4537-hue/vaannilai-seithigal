@@ -1,19 +1,19 @@
 // Mock weather data for WeatherMantra - Chennai, Tamil Nadu focus
 export const currentWeather = {
-  location: "Chennai, Tamil Nadu",
-  temperature: 32,
-  realFeel: 38,
-  condition: "Hot and Humid",
+  location: "Madurai, Tamil Nadu",
+  temperature: 35,
+  realFeel: 42,
+  condition: "Very Hot & Dry",
   icon: "sunny",
-  humidity: 78,
-  windSpeed: 12,
-  windDirection: "SW",
-  pressure: 29.92,
-  uvIndex: 11,
-  visibility: 8,
-  dewPoint: 28,
-  cloudCover: 25,
-  heatIndex: 42
+  humidity: 45,
+  windSpeed: 6,
+  windDirection: "NW",
+  pressure: 29.85,
+  uvIndex: 12,
+  visibility: 12,
+  dewPoint: 22,
+  cloudCover: 15,
+  heatIndex: 45
 };
 
 export const minuteCast = {
