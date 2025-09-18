@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { MapPin, Clock, Calendar, Map } from 'lucide-react';
+import { MapPin, Clock, Calendar, Map, Info } from 'lucide-react';
 import Header from '../components/Header';
 import CurrentWeather from '../components/CurrentWeather';
 import MinuteCast from '../components/MinuteCast';
@@ -8,6 +8,8 @@ import DailyForecast from '../components/DailyForecast';
 import AirQuality from '../components/AirQuality';
 import IndiaWeatherAlerts from '../components/IndiaWeatherAlerts';
 import DistrictWeather from '../components/DistrictWeather';
+import TamilNaduFeatures from '../components/TamilNaduFeatures';
+import TamilNaduInsights from '../components/TamilNaduInsights';
 import { currentWeather, minuteCast, hourlyForecast, dailyForecast, airQuality, monsoonAlert, cycloneWatch, heatWave } from '../data/mockWeatherData';
 
 const HomePage = () => {
