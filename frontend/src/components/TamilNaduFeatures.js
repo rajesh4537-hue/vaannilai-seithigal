@@ -68,7 +68,7 @@ const TamilNaduFeatures = () => {
       {/* Regional Weather Centers */}
       <div className="mt-8 pt-6 border-t border-gray-200">
         <div className="text-center">
-          <h5 className="font-medium text-gray-900 mb-3">Powered by Regional Meteorological Centre, Chennai</h5>
+          <h5 className="font-medium text-gray-900 mb-3">பிராந்திய வானிலை மையம், சென்னை ஆதரவுடன்</h5>
           <div className="flex justify-center items-center space-x-6 text-sm text-gray-600">
             <div>📡 121 Weather Stations</div>
             <div>🌊 Coastal Monitoring</div>
