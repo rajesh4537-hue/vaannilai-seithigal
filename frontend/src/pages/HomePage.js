@@ -145,8 +145,8 @@ const HomePage = () => {
       <footer className="bg-white border-t border-gray-200 mt-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="text-center text-sm text-gray-500">
-            <p>© 2025 AccuWeather Clone. This is a demonstration project with mock data.</p>
-            <p className="mt-1">Real AccuWeather provides actual weather forecasting services.</p>
+            <p>© 2025 WeatherMantra. Comprehensive weather forecasting for Tamil Nadu and India.</p>
+            <p className="mt-1">Built with focus on Tamil Nadu districts and regional weather patterns.</p>
           </div>
         </div>
       </footer>
