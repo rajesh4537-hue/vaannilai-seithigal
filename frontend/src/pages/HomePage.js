@@ -5,7 +5,9 @@ import MinuteCast from '../components/MinuteCast';
 import HourlyForecast from '../components/HourlyForecast';
 import DailyForecast from '../components/DailyForecast';
 import AirQuality from '../components/AirQuality';
-import { currentWeather, minuteCast, hourlyForecast, dailyForecast, airQuality } from '../data/mockWeatherData';
+import IndiaWeatherAlerts from '../components/IndiaWeatherAlerts';
+import DistrictWeather from '../components/DistrictWeather';
+import { currentWeather, minuteCast, hourlyForecast, dailyForecast, airQuality, monsoonAlert, cycloneWatch, heatWave } from '../data/mockWeatherData';
 
 const HomePage = () => {
   const [selectedLocation, setSelectedLocation] = useState(currentWeather.location);
