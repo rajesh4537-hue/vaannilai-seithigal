@@ -5,7 +5,7 @@ const TamilNaduFeatures = () => {
   return (
     <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
       <div className="text-center mb-6">
-        <h4 className="text-lg font-semibold text-gray-900 mb-2">Tamil Nadu Weather Specialties</h4>
+        <h4 className="text-lg font-semibold text-gray-900 mb-2">தமிழ்நாடு வானிலை சிறப்பு அம்சங்கள்</h4>
         <p className="text-sm text-gray-600">Weather insights tailored for Tamil Nadu's unique climate and geography</p>
       </div>
 
