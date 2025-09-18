@@ -132,8 +132,8 @@ const HomePage = () => {
                   <div className="w-12 h-12 bg-green-100 rounded-full mx-auto mb-3 flex items-center justify-center">
                     <div className="w-6 h-6 bg-green-600 rounded-full"></div>
                   </div>
-                  <h5 className="font-medium text-gray-900 mb-1">AccuWeather Alerts</h5>
-                  <p className="text-sm text-gray-600">Life-saving severe weather warnings and notifications.</p>
+                  <h5 className="font-medium text-gray-900 mb-1">WeatherMantra Alerts</h5>
+                  <p className="text-sm text-gray-600">Life-saving severe weather warnings and notifications for Tamil Nadu.</p>
                 </div>
               </div>
             </div>
