@@ -5,8 +5,8 @@ import axios from 'axios';
 
 class WeatherAPIService {
   constructor() {
-    // API configuration
-    this.baseURL = 'https://weather.indianapi.in';
+    // API configuration - try OpenWeatherMap format first
+    this.baseURL = 'https://api.openweathermap.org/data/2.5';
     this.apiKey = process.env.REACT_APP_WEATHER_API_KEY; // Will be set in .env file
     
     // Tamil Nadu cities mapping
