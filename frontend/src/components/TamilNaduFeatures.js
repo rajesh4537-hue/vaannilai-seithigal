@@ -70,10 +70,10 @@ const TamilNaduFeatures = () => {
         <div className="text-center">
           <h5 className="font-medium text-gray-900 mb-3">பிராந்திய வானிலை மையம், சென்னை ஆதரவுடன்</h5>
           <div className="flex justify-center items-center space-x-6 text-sm text-gray-600">
-            <div>📡 121 Weather Stations</div>
-            <div>🌊 Coastal Monitoring</div>
-            <div>🌾 Agricultural Advisories</div>
-            <div>⚠️ 24/7 Warning System</div>
+            <div>📡 121 வானிலை நிலையங்கள்</div>
+            <div>🌊 கடலோர கண்காணிப்பு</div>
+            <div>🌾 விவசாய ஆலோசனை</div>
+            <div>⚠️ 24/7 எச்சரிக்கை</div>
           </div>
         </div>
       </div>
