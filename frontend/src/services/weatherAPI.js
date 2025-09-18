@@ -71,25 +71,45 @@ class WeatherAPIService {
     }
   }
 
-  // Transform API data to our app format
-  transformWeatherData(apiData, cityName) {
-    // IndianAPI.in response format transformation
+  // Transform OpenWeatherMap API data to our app format
+  transformOpenWeatherData(apiData, cityName) {
+    const main = apiData.main || {};
+    const weather = apiData.weather?.[0] || {};
+    const wind = apiData.wind || {};
+    
     return {
       location: `${cityName}, Tamil Nadu`,
-      temperature: Math.round(parseFloat(apiData.temperature) || 28),
-      realFeel: Math.round((parseFloat(apiData.temperature) || 28) + 3),
-      condition: this.mapWeatherCondition(apiData.weather_description || 'Unknown'),
-      icon: this.mapWeatherIcon(apiData.weather_description || 'clear'),
-      humidity: parseInt(apiData.humidity) || 65,
-      windSpeed: Math.round(parseFloat(apiData.wind_speed) || 8),
-      windDirection: apiData.wind_direction || 'SW',
-      pressure: parseFloat(apiData.pressure) || 29.92,
-      uvIndex: parseInt(apiData.uv_index) || 6,
-      visibility: Math.round(parseFloat(apiData.visibility) || 10),
-      dewPoint: Math.round(parseFloat(apiData.dew_point) || 22),
-      cloudCover: parseInt(apiData.cloud_cover) || 40,
-      lastUpdated: new Date().toISOString()
+      temperature: Math.round(main.temp || 28),
+      realFeel: Math.round(main.feels_like || main.temp || 28),
+      condition: this.mapWeatherCondition(weather.description || 'Unknown'),
+      icon: this.mapWeatherIcon(weather.description || 'clear'),
+      humidity: main.humidity || 65,
+      windSpeed: Math.round((wind.speed || 2) * 3.6), // Convert m/s to km/h
+      windDirection: this.degreeToDirection(wind.deg) || 'SW',
+      pressure: main.pressure ? (main.pressure * 0.02953) : 29.92, // Convert hPa to inHg
+      uvIndex: 6, // OpenWeatherMap doesn't provide UV in basic plan
+      visibility: apiData.visibility ? Math.round(apiData.visibility / 1000) : 10, // Convert m to km
+      dewPoint: this.calculateDewPoint(main.temp, main.humidity),
+      cloudCover: apiData.clouds?.all || 40,
+      lastUpdated: new Date().toISOString(),
+      isRealData: true
     };
+  }
+
+  // Helper method to convert wind degree to direction
+  degreeToDirection(degree) {
+    if (!degree) return 'SW';
+    const directions = ['N', 'NNE', 'NE', 'ENE', 'E', 'ESE', 'SE', 'SSE', 'S', 'SSW', 'SW', 'WSW', 'W', 'WNW', 'NW', 'NNW'];
+    return directions[Math.round(degree / 22.5) % 16];
+  }
+
+  // Helper method to calculate dew point
+  calculateDewPoint(temp, humidity) {
+    if (!temp || !humidity) return 22;
+    const a = 17.27;
+    const b = 237.7;
+    const alpha = ((a * temp) / (b + temp)) + Math.log(humidity / 100);
+    return Math.round((b * alpha) / (a - alpha));
   }
 
   // Map weather descriptions to our conditions
