@@ -55,10 +55,10 @@ const APIStatusBanner = ({ connectionStatus, onRefresh }) => {
           )}
           
           <button
-            onClick={() => setIsExpanded(!isExpanded)}
-            className="text-xs underline hover:no-underline"
+            onClick={() => setShowSetupGuide(true)}
+            className="bg-white/20 hover:bg-white/30 px-3 py-1 rounded text-xs font-medium transition-colors"
           >
-            {isExpanded ? 'Hide' : 'Setup'} API
+            Get API Key
           </button>
         </div>
       </div>
