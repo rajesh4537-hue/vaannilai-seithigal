@@ -17,15 +17,15 @@ export const currentWeather = {
 };
 
 export const minuteCast = {
-  summary: "Clear skies continue with no precipitation expected in the next 2 hours",
+  summary: "Light to moderate rain continuing for the next 90 minutes, then tapering off",
   precipitation: [
-    { time: "2:00 PM", intensity: 0 },
-    { time: "2:15 PM", intensity: 0 },
-    { time: "2:30 PM", intensity: 0 },
-    { time: "2:45 PM", intensity: 0 },
-    { time: "3:00 PM", intensity: 0 },
-    { time: "3:15 PM", intensity: 0 },
-    { time: "3:30 PM", intensity: 0 },
+    { time: "2:00 PM", intensity: 2 },
+    { time: "2:15 PM", intensity: 2 },
+    { time: "2:30 PM", intensity: 3 },
+    { time: "2:45 PM", intensity: 2 },
+    { time: "3:00 PM", intensity: 2 },
+    { time: "3:15 PM", intensity: 1 },
+    { time: "3:30 PM", intensity: 1 },
     { time: "3:45 PM", intensity: 0 }
   ]
 };
