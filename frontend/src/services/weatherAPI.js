@@ -43,18 +43,18 @@ class WeatherAPIService {
 
       console.log(`🌤️ Fetching real weather for ${cityName}...`);
       
-      // Try OpenWeatherMap API format
-      const response = await axios.get(`${this.baseURL}/weather`, {
+      // Try WeatherAPI.com format
+      const response = await axios.get(`${this.baseURL}/current.json`, {
         params: {
-          q: `${cityName},IN`, // IN for India
-          appid: this.apiKey,
-          units: 'metric' // Celsius
+          key: this.apiKey,
+          q: `${cityName}, Tamil Nadu, India`,
+          aqi: 'yes' // Include air quality
         },
         timeout: 10000 // 10 second timeout
       });
 
       console.log('✅ Real weather data received:', response.data);
-      return this.transformOpenWeatherData(response.data, cityName);
+      return this.transformWeatherAPIData(response.data, cityName);
 
     } catch (error) {
       console.error('❌ Error fetching real weather:', error.message);
