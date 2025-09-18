@@ -32,6 +32,13 @@ const HomePage = () => {
           {/* MinuteCast */}
           <MinuteCast minuteCast={minuteCast} />
 
+          {/* Tamil Nadu Weather Alerts */}
+          <IndiaWeatherAlerts 
+            monsoonAlert={monsoonAlert}
+            cycloneWatch={cycloneWatch}
+            heatWave={heatWave}
+          />
+
           {/* Two Column Layout for Forecasts */}
           <div className="grid grid-cols-1 xl:grid-cols-3 gap-8">
             {/* Hourly Forecast - Takes 2 columns */}
