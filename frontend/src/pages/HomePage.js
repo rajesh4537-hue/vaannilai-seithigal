@@ -172,10 +172,10 @@ const HomePage = () => {
               <button className="w-full mt-4 py-2 text-sm text-blue-600 hover:text-blue-700 font-medium transition-colors">
                 View Satellite
               </button>
-            </div>
+              </div>
 
-            {/* Alerts Card */}
-            <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
+              {/* Alerts Card */}
+              <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
               <h3 className="text-lg font-semibold text-gray-900 mb-4">Weather Alerts</h3>
               <div className="space-y-3">
                 <div className="flex items-center justify-center h-24 bg-green-50 rounded-lg">
