@@ -139,6 +139,14 @@ const HomePage = () => {
               <DistrictWeather />
             </>
           )}
+
+          {/* Tamil Nadu Insights Tab */}
+          {activeTab === 'insights' && (
+            <>
+              {/* Tamil Nadu Specific Insights */}
+              <TamilNaduInsights currentWeather={currentWeather} />
+            </>
+          )}
         </div>
 
         {/* Additional Weather Information Cards - Always Visible except for Districts tab */}
