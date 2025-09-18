@@ -19,11 +19,11 @@ const CurrentWeather = ({ weather }) => {
           <WeatherIcon condition={weather.icon} size="large" />
           <div>
             <div className="text-5xl font-light text-gray-900 mb-1">
-              {weather.temperature}°
+              {weather.temperature}°C
             </div>
             <p className="text-gray-600 mb-2">{weather.condition}</p>
             <p className="text-sm text-gray-500">
-              RealFeel® {weather.realFeel}°
+              RealFeel® {weather.realFeel}°C
             </p>
           </div>
         </div>
