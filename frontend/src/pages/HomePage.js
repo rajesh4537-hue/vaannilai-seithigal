@@ -189,6 +189,7 @@ const HomePage = () => {
             </>
           )}
         </div>
+        )}
 
         {/* Additional Weather Information Cards - Always Visible except for Districts and Insights tabs */}
         {activeTab !== 'districts' && activeTab !== 'insights' && (
