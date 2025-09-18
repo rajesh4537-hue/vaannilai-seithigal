@@ -310,12 +310,11 @@ class WeatherAPIService {
         return { status: 'no_key', message: 'API key not configured' };
       }
 
-      // Test with a simple API call to Chennai
-      const response = await axios.get(`${this.baseURL}/weather`, {
+      // Test with a simple API call to Chennai using WeatherAPI.com
+      const response = await axios.get(`${this.baseURL}/current.json`, {
         params: {
-          q: 'Chennai,IN',
-          appid: this.apiKey,
-          units: 'metric'
+          key: this.apiKey,
+          q: 'Chennai, Tamil Nadu, India'
         },
         timeout: 5000
       });
@@ -323,7 +322,7 @@ class WeatherAPIService {
       return { 
         status: 'connected', 
         message: 'Real-time weather data active',
-        service: 'OpenWeatherMap'
+        service: 'WeatherAPI.com'
       };
       
     } catch (error) {
