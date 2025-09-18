@@ -26,7 +26,8 @@ const HomePage = () => {
     { id: 'current', name: 'Current Weather', icon: MapPin },
     { id: 'hourly', name: 'Hourly', icon: Clock },
     { id: 'daily', name: 'Daily', icon: Calendar },
-    { id: 'districts', name: 'Districts', icon: Map }
+    { id: 'districts', name: 'Districts', icon: Map },
+    { id: 'insights', name: 'TN Insights', icon: Info }
   ];
 
   return (
