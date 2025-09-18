@@ -4,6 +4,7 @@ import APISetupGuide from './APISetupGuide';
 
 const APIStatusBanner = ({ connectionStatus, onRefresh }) => {
   const [isExpanded, setIsExpanded] = useState(false);
+  const [showSetupGuide, setShowSetupGuide] = useState(false);
 
   const getStatusColor = () => {
     switch (connectionStatus.type) {
