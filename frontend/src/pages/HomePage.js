@@ -87,8 +87,24 @@ const HomePage = () => {
           </div>
         </div>
 
+        {/* Loading State */}
+        {loading && (
+          <div className="flex items-center justify-center py-12">
+            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
+            <span className="ml-3 text-gray-600">Loading weather data...</span>
+          </div>
+        )}
+
+        {/* Error State */}
+        {error && (
+          <div className="bg-red-50 border border-red-200 rounded-lg p-4 mb-6">
+            <p className="text-red-800 text-sm">⚠️ {error}</p>
+          </div>
+        )}
+
         {/* Tab Content */}
-        <div className="space-y-8">
+        {!loading && currentWeather && (
+          <div className="space-y-8">
           {/* Current Weather Tab */}
           {activeTab === 'current' && (
             <>
