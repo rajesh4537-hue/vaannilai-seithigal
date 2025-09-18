@@ -1,4 +1,4 @@
-// Mock weather data for AccuWeather clone - Chennai, Tamil Nadu focus
+// Mock weather data for WeatherMantra - Chennai, Tamil Nadu focus
 export const currentWeather = {
   location: "Chennai, Tamil Nadu",
   temperature: 32,
