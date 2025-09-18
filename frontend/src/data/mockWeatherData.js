@@ -17,16 +17,16 @@ export const currentWeather = {
 };
 
 export const minuteCast = {
-  summary: "Light rain starting in 12 minutes, lasting 45 minutes",
+  summary: "Heavy monsoon shower expected in 25 minutes, lasting 90 minutes",
   precipitation: [
     { time: "2:00 PM", intensity: 0 },
-    { time: "2:15 PM", intensity: 1 },
+    { time: "2:15 PM", intensity: 0 },
     { time: "2:30 PM", intensity: 2 },
     { time: "2:45 PM", intensity: 3 },
-    { time: "3:00 PM", intensity: 2 },
-    { time: "3:15 PM", intensity: 1 },
-    { time: "3:30 PM", intensity: 0 },
-    { time: "3:45 PM", intensity: 0 }
+    { time: "3:00 PM", intensity: 3 },
+    { time: "3:15 PM", intensity: 3 },
+    { time: "3:30 PM", intensity: 2 },
+    { time: "3:45 PM", intensity: 1 }
   ]
 };
 
