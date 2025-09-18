@@ -1,18 +1,19 @@
-// Mock weather data for AccuWeather clone
+// Mock weather data for AccuWeather clone - Chennai, Tamil Nadu focus
 export const currentWeather = {
-  location: "New York, NY",
-  temperature: 72,
-  realFeel: 75,
-  condition: "Partly Cloudy",
-  icon: "partly-cloudy",
-  humidity: 65,
-  windSpeed: 8,
+  location: "Chennai, Tamil Nadu",
+  temperature: 32,
+  realFeel: 38,
+  condition: "Hot and Humid",
+  icon: "sunny",
+  humidity: 78,
+  windSpeed: 12,
   windDirection: "SW",
-  pressure: 30.15,
-  uvIndex: 6,
-  visibility: 10,
-  dewPoint: 61,
-  cloudCover: 40
+  pressure: 29.92,
+  uvIndex: 11,
+  visibility: 8,
+  dewPoint: 28,
+  cloudCover: 25,
+  heatIndex: 42
 };
 
 export const minuteCast = {
