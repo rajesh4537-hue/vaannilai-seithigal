@@ -202,35 +202,8 @@ const HomePage = () => {
               </div>
             </div>
 
-            {/* Footer Info */}
-            <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
-              <div className="text-center">
-                <h4 className="text-lg font-semibold text-gray-900 mb-2">WeatherMantra Features</h4>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
-                  <div className="text-center">
-                    <div className="w-12 h-12 bg-blue-100 rounded-full mx-auto mb-3 flex items-center justify-center">
-                      <div className="w-6 h-6 bg-blue-600 rounded-full"></div>
-                    </div>
-                    <h5 className="font-medium text-gray-900 mb-1">MinuteCast®</h5>
-                    <p className="text-sm text-gray-600">Minute-by-minute precipitation forecasts for the next 2 hours.</p>
-                  </div>
-                  <div className="text-center">
-                    <div className="w-12 h-12 bg-orange-100 rounded-full mx-auto mb-3 flex items-center justify-center">
-                      <div className="w-6 h-6 bg-orange-600 rounded-full"></div>
-                    </div>
-                    <h5 className="font-medium text-gray-900 mb-1">RealFeel®</h5>
-                    <p className="text-sm text-gray-600">What the temperature actually feels like outside.</p>
-                  </div>
-                  <div className="text-center">
-                    <div className="w-12 h-12 bg-green-100 rounded-full mx-auto mb-3 flex items-center justify-center">
-                      <div className="w-6 h-6 bg-green-600 rounded-full"></div>
-                    </div>
-                    <h5 className="font-medium text-gray-900 mb-1">WeatherMantra Alerts</h5>
-                    <p className="text-sm text-gray-600">Life-saving severe weather warnings and notifications for Tamil Nadu.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
+            {/* Tamil Nadu Features */}
+            <TamilNaduFeatures />
           </div>
         )}
       </main>
