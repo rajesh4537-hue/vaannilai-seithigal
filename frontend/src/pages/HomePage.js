@@ -55,6 +55,9 @@ const HomePage = () => {
           {/* Daily Forecast - Full Width */}
           <DailyForecast forecast={dailyForecast} />
 
+          {/* District-wise Weather Information */}
+          <DistrictWeather />
+
           {/* Additional Weather Information Cards */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {/* Radar Card */}
