@@ -79,7 +79,7 @@ const CurrentWeather = ({ weather }) => {
               <Droplets className="h-4 w-4 text-blue-600" />
               <span className="text-sm font-medium text-gray-700">Dew Point</span>
             </div>
-            <p className="text-lg font-semibold text-gray-900">{weather.dewPoint}°</p>
+            <p className="text-lg font-semibold text-gray-900">{weather.dewPoint}°C</p>
           </div>
 
           {weather.heatIndex && (
