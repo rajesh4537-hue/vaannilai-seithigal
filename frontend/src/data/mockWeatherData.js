@@ -64,9 +64,9 @@ export const dailyForecast = [
 ];
 
 export const airQuality = {
-  index: 156,
-  level: "Unhealthy",
-  description: "Air quality is unhealthy for sensitive groups. Active people should limit outdoor exercise."
+  index: 89,
+  level: "Moderate",
+  description: "Air quality is acceptable for most people. Sensitive individuals may experience minor issues."
 };
 
 export const locations = [
