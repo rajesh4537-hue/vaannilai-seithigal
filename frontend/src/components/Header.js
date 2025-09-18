@@ -24,7 +24,10 @@ const Header = ({ onLocationChange }) => {
           {/* Logo */}
           <div className="flex items-center">
             <div className="flex-shrink-0">
-              <h1 className="text-2xl font-bold text-blue-600">WeatherMantra</h1>
+              <div>
+                <h1 className="text-2xl font-bold text-blue-600">WeatherMantra</h1>
+                <p className="text-xs text-gray-500">Tamil Nadu Weather Authority</p>
+              </div>
             </div>
           </div>
 
