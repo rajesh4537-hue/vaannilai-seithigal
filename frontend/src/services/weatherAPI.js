@@ -71,29 +71,85 @@ class WeatherAPIService {
     }
   }
 
-  // Transform OpenWeatherMap API data to our app format
-  transformOpenWeatherData(apiData, cityName) {
-    const main = apiData.main || {};
-    const weather = apiData.weather?.[0] || {};
-    const wind = apiData.wind || {};
+  // Transform WeatherAPI.com data to our app format
+  transformWeatherAPIData(apiData, cityName) {
+    const current = apiData.current || {};
+    const location = apiData.location || {};
+    const condition = current.condition || {};
     
     return {
-      location: `${cityName}, Tamil Nadu`,
-      temperature: Math.round(main.temp || 28),
-      realFeel: Math.round(main.feels_like || main.temp || 28),
-      condition: this.mapWeatherCondition(weather.description || 'Unknown'),
-      icon: this.mapWeatherIcon(weather.description || 'clear'),
-      humidity: main.humidity || 65,
-      windSpeed: Math.round((wind.speed || 2) * 3.6), // Convert m/s to km/h
-      windDirection: this.degreeToDirection(wind.deg) || 'SW',
-      pressure: main.pressure ? (main.pressure * 0.02953) : 29.92, // Convert hPa to inHg
-      uvIndex: 6, // OpenWeatherMap doesn't provide UV in basic plan
-      visibility: apiData.visibility ? Math.round(apiData.visibility / 1000) : 10, // Convert m to km
-      dewPoint: this.calculateDewPoint(main.temp, main.humidity),
-      cloudCover: apiData.clouds?.all || 40,
-      lastUpdated: new Date().toISOString(),
+      location: `${location.name || cityName}, Tamil Nadu`,
+      temperature: Math.round(current.temp_c || 28),
+      realFeel: Math.round(current.feelslike_c || current.temp_c || 28),
+      condition: condition.text || 'Unknown',
+      icon: this.mapWeatherAPIIcon(condition.code || 1000),
+      humidity: current.humidity || 65,
+      windSpeed: Math.round(current.wind_kph || 8),
+      windDirection: current.wind_dir || 'SW',
+      pressure: current.pressure_mb ? (current.pressure_mb * 0.02953) : 29.92,
+      uvIndex: Math.round(current.uv || 6),
+      visibility: Math.round(current.vis_km || 10),
+      dewPoint: Math.round(current.dewpoint_c || 22),
+      cloudCover: current.cloud || 40,
+      lastUpdated: current.last_updated || new Date().toISOString(),
       isRealData: true
     };
+  }
+
+  // Map WeatherAPI.com condition codes to icons
+  mapWeatherAPIIcon(code) {
+    const iconMap = {
+      1000: 'sunny', // Sunny
+      1003: 'partly-cloudy', // Partly cloudy
+      1006: 'cloudy', // Cloudy
+      1009: 'cloudy', // Overcast
+      1030: 'fog', // Mist
+      1063: 'light-rain', // Patchy rain possible
+      1066: 'snow', // Patchy snow possible
+      1069: 'light-rain', // Patchy sleet possible
+      1072: 'light-rain', // Patchy freezing drizzle possible
+      1087: 'thunderstorms', // Thundery outbreaks possible
+      1114: 'snow', // Blowing snow
+      1117: 'snow', // Blizzard
+      1135: 'fog', // Fog
+      1147: 'fog', // Freezing fog
+      1150: 'light-rain', // Patchy light drizzle
+      1153: 'light-rain', // Light drizzle
+      1168: 'light-rain', // Freezing drizzle
+      1171: 'light-rain', // Heavy freezing drizzle
+      1180: 'light-rain', // Patchy light rain
+      1183: 'light-rain', // Light rain
+      1186: 'rain', // Moderate rain at times
+      1189: 'rain', // Moderate rain
+      1192: 'rain', // Heavy rain at times
+      1195: 'rain', // Heavy rain
+      1198: 'light-rain', // Light freezing rain
+      1201: 'rain', // Moderate or heavy freezing rain
+      1204: 'light-rain', // Light sleet
+      1207: 'rain', // Moderate or heavy sleet
+      1210: 'snow', // Patchy light snow
+      1213: 'snow', // Light snow
+      1216: 'snow', // Patchy moderate snow
+      1219: 'snow', // Moderate snow
+      1222: 'snow', // Patchy heavy snow
+      1225: 'snow', // Heavy snow
+      1237: 'snow', // Ice pellets
+      1240: 'light-rain', // Light rain shower
+      1243: 'rain', // Moderate or heavy rain shower
+      1246: 'rain', // Torrential rain shower
+      1249: 'light-rain', // Light sleet showers
+      1252: 'rain', // Moderate or heavy sleet showers
+      1255: 'snow', // Light snow showers
+      1258: 'snow', // Moderate or heavy snow showers
+      1261: 'snow', // Light showers of ice pellets
+      1264: 'snow', // Moderate or heavy showers of ice pellets
+      1273: 'thunderstorms', // Patchy light rain with thunder
+      1276: 'thunderstorms', // Moderate or heavy rain with thunder
+      1279: 'thunderstorms', // Patchy light snow with thunder
+      1282: 'thunderstorms' // Moderate or heavy snow with thunder
+    };
+    
+    return iconMap[code] || 'partly-cloudy';
   }
 
   // Helper method to convert wind degree to direction
