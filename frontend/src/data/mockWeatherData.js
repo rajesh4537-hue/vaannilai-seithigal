@@ -46,21 +46,21 @@ export const hourlyForecast = [
 ];
 
 export const dailyForecast = [
-  { day: "Today", high: 34, low: 26, condition: "Hot & Humid", precipitation: 30, icon: "sunny" },
-  { day: "Thu", high: 35, low: 27, condition: "Monsoon Rain", precipitation: 85, icon: "rain" },
-  { day: "Fri", high: 31, low: 25, condition: "Heavy Rain", precipitation: 90, icon: "rain" },
-  { day: "Sat", high: 29, low: 24, condition: "Thunderstorms", precipitation: 80, icon: "thunderstorms" },
-  { day: "Sun", high: 32, low: 25, condition: "Partly Cloudy", precipitation: 40, icon: "partly-cloudy" },
-  { day: "Mon", high: 33, low: 26, condition: "Hot & Sunny", precipitation: 15, icon: "sunny" },
-  { day: "Tue", high: 35, low: 27, condition: "Very Hot", precipitation: 10, icon: "sunny" },
-  { day: "Wed", high: 36, low: 28, condition: "Scorching", precipitation: 5, icon: "sunny" },
-  { day: "Thu", high: 34, low: 26, condition: "Hot & Humid", precipitation: 20, icon: "partly-cloudy" },
-  { day: "Fri", high: 32, low: 25, condition: "Monsoon Rain", precipitation: 75, icon: "rain" },
-  { day: "Sat", high: 30, low: 24, condition: "Heavy Rain", precipitation: 85, icon: "rain" },
-  { day: "Sun", high: 31, low: 25, condition: "Light Rain", precipitation: 60, icon: "light-rain" },
-  { day: "Mon", high: 33, low: 26, condition: "Partly Cloudy", precipitation: 35, icon: "partly-cloudy" },
-  { day: "Tue", high: 34, low: 27, condition: "Hot & Sunny", precipitation: 20, icon: "sunny" },
-  { day: "Wed", high: 35, low: 28, condition: "Thunderstorms", precipitation: 70, icon: "thunderstorms" }
+  { day: "Today", high: 37, low: 24, condition: "Very Hot & Dry", precipitation: 5, icon: "sunny" },
+  { day: "Thu", high: 38, low: 25, condition: "Scorching", precipitation: 0, icon: "sunny" },
+  { day: "Fri", high: 39, low: 26, condition: "Extreme Heat", precipitation: 0, icon: "sunny" },
+  { day: "Sat", high: 37, low: 25, condition: "Very Hot", precipitation: 10, icon: "sunny" },
+  { day: "Sun", high: 36, low: 24, condition: "Hot & Sunny", precipitation: 5, icon: "sunny" },
+  { day: "Mon", high: 35, low: 23, condition: "Hot", precipitation: 0, icon: "sunny" },
+  { day: "Tue", high: 34, low: 22, condition: "Hot", precipitation: 15, icon: "partly-cloudy" },
+  { day: "Wed", high: 33, low: 23, condition: "Partly Cloudy", precipitation: 25, icon: "partly-cloudy" },
+  { day: "Thu", high: 32, low: 24, condition: "Light Rain", precipitation: 60, icon: "light-rain" },
+  { day: "Fri", high: 30, low: 23, condition: "Monsoon Rain", precipitation: 80, icon: "rain" },
+  { day: "Sat", high: 29, low: 22, condition: "Heavy Rain", precipitation: 85, icon: "rain" },
+  { day: "Sun", high: 31, low: 23, condition: "Thunderstorms", precipitation: 70, icon: "thunderstorms" },
+  { day: "Mon", high: 33, low: 24, condition: "Partly Cloudy", precipitation: 40, icon: "partly-cloudy" },
+  { day: "Tue", high: 35, low: 25, condition: "Hot & Sunny", precipitation: 20, icon: "sunny" },
+  { day: "Wed", high: 36, low: 26, condition: "Very Hot", precipitation: 10, icon: "sunny" }
 ];
 
 export const airQuality = {
