@@ -104,7 +104,7 @@ const IndiaWeatherAlerts = ({ monsoonAlert, cycloneWatch, heatWave }) => {
               Official weather warnings and forecasts for Tamil Nadu region
             </p>
             <button className="mt-2 text-xs text-blue-600 hover:text-blue-800 font-medium">
-              Visit WeatherMantra Tamil Nadu →
+              Visit Vaannilai Seithigal →
             </button>
           </div>
         </div>
