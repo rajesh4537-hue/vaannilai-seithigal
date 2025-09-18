@@ -81,6 +81,17 @@ const CurrentWeather = ({ weather }) => {
             </div>
             <p className="text-lg font-semibold text-gray-900">{weather.dewPoint}°</p>
           </div>
+
+          {weather.heatIndex && (
+            <div className="bg-white/50 rounded-lg p-4 col-span-2">
+              <div className="flex items-center space-x-2 mb-2">
+                <Sun className="h-4 w-4 text-red-600" />
+                <span className="text-sm font-medium text-gray-700">Heat Index</span>
+              </div>
+              <p className="text-lg font-semibold text-red-600">{weather.heatIndex}°C</p>
+              <p className="text-xs text-red-500 mt-1">Extreme Caution - Heat exhaustion possible</p>
+            </div>
+          )}
         </div>
       </div>
     </div>
