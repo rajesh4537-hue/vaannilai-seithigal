@@ -42,10 +42,10 @@ const DailyForecast = ({ forecast }) => {
             {/* Temperature Range */}
             <div className="flex items-center space-x-2 flex-1 justify-end">
               <span className="text-sm font-semibold text-gray-900">
-                {item.high}°
+                {item.high}°C
               </span>
               <span className="text-sm text-gray-500">
-                {item.low}°
+                {item.low}°C
               </span>
             </div>
           </div>
