@@ -10,7 +10,9 @@ import IndiaWeatherAlerts from '../components/IndiaWeatherAlerts';
 import DistrictWeather from '../components/DistrictWeather';
 import TamilNaduFeatures from '../components/TamilNaduFeatures';
 import TamilNaduInsights from '../components/TamilNaduInsights';
-import { currentWeather, minuteCast, hourlyForecast, dailyForecast, airQuality, monsoonAlert, cycloneWatch, heatWave } from '../data/mockWeatherData';
+import APIStatusBanner from '../components/APIStatusBanner';
+import { useWeatherData } from '../hooks/useWeatherData';
+import { dailyForecast, airQuality, monsoonAlert, cycloneWatch, heatWave } from '../data/mockWeatherData';
 
 const HomePage = () => {
   const [selectedLocation, setSelectedLocation] = useState(currentWeather.location);
