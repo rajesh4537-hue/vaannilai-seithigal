@@ -189,10 +189,9 @@ const HomePage = () => {
                 Manage Alerts
               </button>
             </div>
-          </div>
 
-          {/* Footer Info */}
-          <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
+            {/* Footer Info */}
+            <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
             <div className="text-center">
               <h4 className="text-lg font-semibold text-gray-900 mb-2">WeatherMantra Features</h4>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
