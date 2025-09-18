@@ -106,6 +106,11 @@ const APIStatusBanner = ({ connectionStatus, onRefresh }) => {
           </div>
         </div>
       )}
+      
+      {/* Setup Guide Modal */}
+      {showSetupGuide && (
+        <APISetupGuide onClose={() => setShowSetupGuide(false)} />
+      )}
     </div>
   );
 };
