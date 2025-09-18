@@ -254,21 +254,26 @@ class WeatherAPIService {
         return { status: 'no_key', message: 'API key not configured' };
       }
 
-      const response = await axios.get(`${this.baseURL}/india/cities`, {
-        headers: { 'x-api-key': this.apiKey },
+      // Test with a simple API call to Chennai
+      const response = await axios.get(`${this.baseURL}/weather`, {
+        params: {
+          q: 'Chennai,IN',
+          appid: this.apiKey,
+          units: 'metric'
+        },
         timeout: 5000
       });
 
       return { 
         status: 'connected', 
-        message: 'API connected successfully',
-        cities: response.data?.length || 0
+        message: 'Real-time weather data active',
+        service: 'OpenWeatherMap'
       };
       
     } catch (error) {
       return { 
         status: 'error', 
-        message: error.response?.status === 401 ? 'Invalid API key' : 'Connection failed'
+        message: error.response?.status === 401 ? 'Invalid API key' : `Connection failed: ${error.message}`
       };
     }
   }
