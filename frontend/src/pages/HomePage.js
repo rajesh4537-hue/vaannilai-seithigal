@@ -15,13 +15,31 @@ import { useWeatherData } from '../hooks/useWeatherData';
 import { dailyForecast, airQuality, monsoonAlert, cycloneWatch, heatWave } from '../data/mockWeatherData';
 
 const HomePage = () => {
-  const [selectedLocation, setSelectedLocation] = useState(currentWeather.location);
   const [activeTab, setActiveTab] = useState('current');
+  
+  // Use real weather data hook
+  const {
+    weatherData: currentWeather,
+    minuteCast,
+    hourlyForecast,
+    selectedCity,
+    loading,
+    error,
+    connectionStatus,
+    changeCity,
+    refreshData,
+    availableCities,
+    isRealData
+  } = useWeatherData('Madurai'); // Start with Madurai
 
   const handleLocationChange = (newLocation) => {
-    setSelectedLocation(newLocation);
-    // In a real app, this would trigger new weather data fetch
-    console.log('Location changed to:', newLocation);
+    // Extract city name from location string
+    const cityName = newLocation.replace(', Tamil Nadu', '').replace(',', '').trim();
+    if (availableCities.includes(cityName)) {
+      changeCity(cityName);
+    } else {
+      console.log('City not available in Tamil Nadu list:', cityName);
+    }
   };
 
   const tabs = [
