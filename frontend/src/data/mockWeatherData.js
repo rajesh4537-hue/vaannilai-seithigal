@@ -1,4 +1,4 @@
-// Mock weather data for WeatherMantra - Chennai, Tamil Nadu focus
+// Mock weather data for Vaannilai Seithigal - Tamil Nadu focus
 export const currentWeather = {
   location: "Madurai, Tamil Nadu",
   temperature: 35,
