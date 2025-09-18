@@ -46,7 +46,7 @@ export const hourlyForecast = [
 ];
 
 export const dailyForecast = [
-  { day: "Today", high: 37, low: 24, condition: "Very Hot & Dry", precipitation: 5, icon: "sunny" },
+  { day: "Today", high: 30, low: 23, condition: "Rainy", precipitation: 85, icon: "rain" },
   { day: "Thu", high: 38, low: 25, condition: "Scorching", precipitation: 0, icon: "sunny" },
   { day: "Fri", high: 39, low: 26, condition: "Extreme Heat", precipitation: 0, icon: "sunny" },
   { day: "Sat", high: 37, low: 25, condition: "Very Hot", precipitation: 10, icon: "sunny" },
