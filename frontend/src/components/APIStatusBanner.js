@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Wifi, WifiOff, AlertTriangle, CheckCircle, RefreshCw, ExternalLink } from 'lucide-react';
+import APISetupGuide from './APISetupGuide';
 
 const APIStatusBanner = ({ connectionStatus, onRefresh }) => {
   const [isExpanded, setIsExpanded] = useState(false);
