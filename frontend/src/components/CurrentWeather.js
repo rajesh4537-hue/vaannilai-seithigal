@@ -36,7 +36,7 @@ const CurrentWeather = ({ weather }) => {
               <span className="text-sm font-medium text-gray-700">Wind</span>
             </div>
             <p className="text-lg font-semibold text-gray-900">
-              {weather.windSpeed} mph
+              {weather.windSpeed} km/h
             </p>
             <p className="text-xs text-gray-500">{weather.windDirection}</p>
           </div>
