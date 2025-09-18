@@ -149,8 +149,8 @@ const HomePage = () => {
           )}
         </div>
 
-        {/* Additional Weather Information Cards - Always Visible except for Districts tab */}
-        {activeTab !== 'districts' && (
+        {/* Additional Weather Information Cards - Always Visible except for Districts and Insights tabs */}
+        {activeTab !== 'districts' && activeTab !== 'insights' && (
           <div className="space-y-8 mt-8">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {/* Radar Card */}
