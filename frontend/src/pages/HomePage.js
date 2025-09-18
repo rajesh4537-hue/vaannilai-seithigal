@@ -212,8 +212,14 @@ const HomePage = () => {
       <footer className="bg-white border-t border-gray-200 mt-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="text-center text-sm text-gray-500">
-            <p>© 2025 WeatherMantra. Comprehensive weather forecasting for Tamil Nadu and India.</p>
-            <p className="mt-1">Built with focus on Tamil Nadu districts and regional weather patterns.</p>
+            <p>© 2025 WeatherMantra Tamil Nadu. வானிலை அறிவோம், வாழ்வை மேம்படுத்துவோம்.</p>
+            <p className="mt-1">Exclusively designed for Tamil Nadu's 38 districts and unique weather patterns.</p>
+            <div className="mt-3 flex justify-center items-center space-x-6 text-xs">
+              <span>🏛️ Licensed by IMD</span>
+              <span>🌊 Bay of Bengal Monitoring</span>
+              <span>🌾 Agricultural Forecasts</span>
+              <span>📱 Tamil Language Support</span>
+            </div>
           </div>
         </div>
       </footer>
