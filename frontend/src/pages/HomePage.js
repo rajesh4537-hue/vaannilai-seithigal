@@ -461,7 +461,8 @@ const HomePage = () => {
                 </svg>
               </button>
             </div>
-            <div className="p-4 sm:p-6 h-full overflow-auto">
+            <div className="p-4 sm:p-6 h-full overflow-y-auto max-h-screen"
+                 style={{maxHeight: 'calc(100vh - 80px)'}}>
               <div className="space-y-4">
                 {/* Mobile-friendly satellite content */}
                 <div className="block sm:hidden">
