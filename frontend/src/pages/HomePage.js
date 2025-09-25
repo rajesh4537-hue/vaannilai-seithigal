@@ -16,6 +16,8 @@ import { dailyForecast, airQuality, monsoonAlert, cycloneWatch, heatWave } from 
 
 const HomePage = () => {
   const [activeTab, setActiveTab] = useState('current');
+  const [showRadarModal, setShowRadarModal] = useState(false);
+  const [showSatelliteModal, setShowSatelliteModal] = useState(false);
   
   // Use real weather data hook
   const {
