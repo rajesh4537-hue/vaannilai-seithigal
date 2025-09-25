@@ -345,52 +345,102 @@ const HomePage = () => {
 
       {/* Radar Modal */}
       {showRadarModal && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
-          <div className="bg-white rounded-xl max-w-4xl w-full max-h-[90vh] overflow-hidden">
-            <div className="flex items-center justify-between p-6 border-b border-gray-200">
-              <h2 className="text-xl font-semibold text-gray-900">Live Weather Radar - Tamil Nadu</h2>
+        <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-2 sm:p-4">
+          <div className="bg-white rounded-xl w-full h-full sm:max-w-4xl sm:w-full sm:max-h-[90vh] sm:h-auto overflow-hidden">
+            <div className="flex items-center justify-between p-4 sm:p-6 border-b border-gray-200">
+              <h2 className="text-lg sm:text-xl font-semibold text-gray-900">Live Weather Radar - Tamil Nadu</h2>
               <button
                 onClick={() => setShowRadarModal(false)}
-                className="text-gray-400 hover:text-gray-600 transition-colors"
+                className="text-gray-400 hover:text-gray-600 transition-colors p-2 -m-2"
               >
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                 </svg>
               </button>
             </div>
-            <div className="p-6">
-              <div className="aspect-video bg-gray-100 rounded-lg overflow-hidden">
-                {/* OpenWeatherMap Radar Layer */}
-                <iframe
-                  src="https://openweathermap.org/weathermap?basemap=map&cities=true&layer=precipitation&lat=11.0168&lon=76.9558&zoom=6"
-                  width="100%"
-                  height="100%"
-                  frameBorder="0"
-                  title="Tamil Nadu Weather Radar"
-                  className="w-full h-full"
-                />
+            <div className="p-4 sm:p-6 h-full overflow-auto">
+              {/* Mobile-friendly radar content */}
+              <div className="space-y-4">
+                {/* Mobile fallback - Direct link to weather service */}
+                <div className="block sm:hidden">
+                  <div className="bg-gradient-to-br from-blue-50 to-green-50 rounded-lg p-6 text-center">
+                    <div className="w-16 h-16 bg-blue-600 rounded-full mx-auto mb-4 flex items-center justify-center relative">
+                      <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center">
+                        <div className="w-4 h-4 bg-blue-600 rounded-full"></div>
+                      </div>
+                      <div className="absolute inset-0 border-4 border-blue-300 rounded-full animate-ping"></div>
+                    </div>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-2">Interactive Weather Radar</h3>
+                    <p className="text-sm text-gray-600 mb-4">Live precipitation data for Tamil Nadu region</p>
+                    <a 
+                      href="https://openweathermap.org/weathermap?basemap=map&cities=true&layer=precipitation&lat=11.0168&lon=76.9558&zoom=6"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium"
+                    >
+                      Open in New Tab →
+                    </a>
+                  </div>
+                  
+                  {/* Live weather summary for mobile */}
+                  <div className="mt-4 bg-white rounded-lg border border-gray-200 p-4">
+                    <h4 className="font-semibold text-gray-900 mb-3">Current Radar Summary</h4>
+                    <div className="grid grid-cols-2 gap-3 text-sm">
+                      <div className="flex items-center space-x-2">
+                        <div className="w-3 h-3 bg-green-400 rounded-full"></div>
+                        <span>Light Rain Areas</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
+                        <span>Moderate Rain</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <div className="w-3 h-3 bg-purple-600 rounded-full"></div>
+                        <span>Heavy Showers</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <div className="w-3 h-3 bg-gray-300 rounded-full"></div>
+                        <span>Clear Areas</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Desktop iframe */}
+                <div className="hidden sm:block">
+                  <div className="aspect-video bg-gray-100 rounded-lg overflow-hidden">
+                    <iframe
+                      src="https://openweathermap.org/weathermap?basemap=map&cities=true&layer=precipitation&lat=11.0168&lon=76.9558&zoom=6"
+                      width="100%"
+                      height="100%"
+                      frameBorder="0"
+                      title="Tamil Nadu Weather Radar"
+                      className="w-full h-full"
+                    />
+                  </div>
+                  <div className="mt-4 flex flex-wrap gap-4 text-sm">
+                    <div className="flex items-center space-x-2">
+                      <div className="w-3 h-3 bg-blue-200 rounded-full"></div>
+                      <span>Light Precipitation</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
+                      <span>Moderate Precipitation</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <div className="w-3 h-3 bg-blue-800 rounded-full"></div>
+                      <span>Heavy Precipitation</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <div className="w-3 h-3 bg-purple-600 rounded-full"></div>
+                      <span>Very Heavy Precipitation</span>
+                    </div>
+                  </div>
+                  <p className="mt-3 text-sm text-gray-600">
+                    🌧️ Live precipitation data for Tamil Nadu region. Map shows current weather patterns and rainfall intensity.
+                  </p>
+                </div>
               </div>
-              <div className="mt-4 flex flex-wrap gap-4 text-sm">
-                <div className="flex items-center space-x-2">
-                  <div className="w-3 h-3 bg-blue-200 rounded-full"></div>
-                  <span>Light Precipitation</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
-                  <span>Moderate Precipitation</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <div className="w-3 h-3 bg-blue-800 rounded-full"></div>
-                  <span>Heavy Precipitation</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <div className="w-3 h-3 bg-purple-600 rounded-full"></div>
-                  <span>Very Heavy Precipitation</span>
-                </div>
-              </div>
-              <p className="mt-3 text-sm text-gray-600">
-                🌧️ Live precipitation data for Tamil Nadu region. Map shows current weather patterns and rainfall intensity.
-              </p>
             </div>
           </div>
         </div>
