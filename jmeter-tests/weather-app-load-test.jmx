@@ -163,7 +163,7 @@
             <collectionProp name="Arguments.arguments">
               <elementProp name="key" elementType="HTTPArgument">
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                <stringProp name="Argument.value">${WEATHER_API_KEY}</stringProp>
+                <stringProp name="Argument.value">c0eae69192864415896154020251809</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
                 <stringProp name="Argument.name">key</stringProp>
               </elementProp>
