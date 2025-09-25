@@ -12,6 +12,17 @@ html, body {
   height: 100%;
 }
 
+/* Touch interaction improvements */
+.touch-manipulation {
+  touch-action: manipulation;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 /* Custom scrolling styles for better mobile experience */
 .scrollbar-hide {
   -ms-overflow-style: none;  /* Internet Explorer 10+ */
@@ -63,6 +74,21 @@ body.modal-open {
   overflow: hidden;
   position: fixed;
   width: 100%;
+}
+
+/* Mobile button improvements */
+@media (max-width: 768px) {
+  button {
+    min-height: 44px; /* iOS minimum tap target */
+    min-width: 44px;
+  }
+  
+  .user-menu-dropdown {
+    position: fixed !important;
+    right: 10px !important;
+    top: 60px !important;
+    z-index: 9999;
+  }
 }
 
 body {
