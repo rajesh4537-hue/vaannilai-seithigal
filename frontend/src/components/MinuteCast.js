@@ -33,7 +33,7 @@ const MinuteCast = ({ minuteCast }) => {
   };
 
   return (
-    <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
+    <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-200 mobile-scroll">
       <div className="flex items-center space-x-2 mb-4">
         <Clock className="h-5 w-5 text-blue-600" />
         <h3 className="text-lg font-semibold text-gray-900">MinuteCast®</h3>
