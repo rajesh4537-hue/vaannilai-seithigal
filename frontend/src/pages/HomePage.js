@@ -110,7 +110,8 @@ const HomePage = () => {
 
         {/* Tab Content */}
         {!loading && currentWeather && (
-          <div className="space-y-8">
+          <div className="space-y-8 mobile-scroll overflow-y-auto" 
+               style={{maxHeight: 'calc(100vh - 200px)'}}>
           {/* Current Weather Tab */}
           {activeTab === 'current' && (
             <>
