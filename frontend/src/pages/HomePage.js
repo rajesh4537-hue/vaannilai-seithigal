@@ -448,52 +448,106 @@ const HomePage = () => {
 
       {/* Satellite Modal */}
       {showSatelliteModal && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
-          <div className="bg-white rounded-xl max-w-4xl w-full max-h-[90vh] overflow-hidden">
-            <div className="flex items-center justify-between p-6 border-b border-gray-200">
-              <h2 className="text-xl font-semibold text-gray-900">Live Satellite View - Tamil Nadu</h2>
+        <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-2 sm:p-4">
+          <div className="bg-white rounded-xl w-full h-full sm:max-w-4xl sm:w-full sm:max-h-[90vh] sm:h-auto overflow-hidden">
+            <div className="flex items-center justify-between p-4 sm:p-6 border-b border-gray-200">
+              <h2 className="text-lg sm:text-xl font-semibold text-gray-900">Live Satellite View - Tamil Nadu</h2>
               <button
                 onClick={() => setShowSatelliteModal(false)}
-                className="text-gray-400 hover:text-gray-600 transition-colors"
+                className="text-gray-400 hover:text-gray-600 transition-colors p-2 -m-2"
               >
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                 </svg>
               </button>
             </div>
-            <div className="p-6">
-              <div className="aspect-video bg-gray-100 rounded-lg overflow-hidden">
-                {/* OpenWeatherMap Satellite Layer */}
-                <iframe
-                  src="https://openweathermap.org/weathermap?basemap=map&cities=true&layer=clouds&lat=11.0168&lon=76.9558&zoom=6"
-                  width="100%"
-                  height="100%"
-                  frameBorder="0"
-                  title="Tamil Nadu Satellite View"
-                  className="w-full h-full"
-                />
+            <div className="p-4 sm:p-6 h-full overflow-auto">
+              <div className="space-y-4">
+                {/* Mobile-friendly satellite content */}
+                <div className="block sm:hidden">
+                  <div className="bg-gradient-to-br from-gray-50 to-blue-50 rounded-lg p-6 text-center">
+                    <div className="w-16 h-16 bg-gray-600 rounded-full mx-auto mb-4 flex items-center justify-center relative">
+                      <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center">
+                        <div className="w-4 h-4 bg-gray-600 rounded-full"></div>
+                      </div>
+                    </div>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-2">Live Satellite View</h3>
+                    <p className="text-sm text-gray-600 mb-4">Real-time cloud coverage and weather systems</p>
+                    <a 
+                      href="https://openweathermap.org/weathermap?basemap=map&cities=true&layer=clouds&lat=11.0168&lon=76.9558&zoom=6"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-block px-6 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors font-medium"
+                    >
+                      Open in New Tab →
+                    </a>
+                  </div>
+
+                  {/* Live satellite summary for mobile */}
+                  <div className="mt-4 bg-white rounded-lg border border-gray-200 p-4">
+                    <h4 className="font-semibold text-gray-900 mb-3">Current Cloud Coverage</h4>
+                    <div className="grid grid-cols-2 gap-3 text-sm">
+                      <div className="flex items-center space-x-2">
+                        <div className="w-3 h-3 bg-white border border-gray-300 rounded-full"></div>
+                        <span>Clear Sky</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <div className="w-3 h-3 bg-gray-200 rounded-full"></div>
+                        <span>Light Clouds</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <div className="w-3 h-3 bg-gray-400 rounded-full"></div>
+                        <span>Moderate Clouds</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <div className="w-3 h-3 bg-gray-600 rounded-full"></div>
+                        <span>Heavy Clouds</span>
+                      </div>
+                    </div>
+                    <div className="mt-3 p-3 bg-blue-50 rounded-lg">
+                      <p className="text-sm text-blue-800">
+                        🛰️ <strong>Current Status:</strong> Monitoring monsoon clouds over Tamil Nadu. 
+                        Bay of Bengal shows active weather systems.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Desktop iframe */}
+                <div className="hidden sm:block">
+                  <div className="aspect-video bg-gray-100 rounded-lg overflow-hidden">
+                    <iframe
+                      src="https://openweathermap.org/weathermap?basemap=map&cities=true&layer=clouds&lat=11.0168&lon=76.9558&zoom=6"
+                      width="100%"
+                      height="100%"
+                      frameBorder="0"
+                      title="Tamil Nadu Satellite View"
+                      className="w-full h-full"
+                    />
+                  </div>
+                  <div className="mt-4 flex flex-wrap gap-4 text-sm">
+                    <div className="flex items-center space-x-2">
+                      <div className="w-3 h-3 bg-white border border-gray-300 rounded-full"></div>
+                      <span>Clear Sky</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <div className="w-3 h-3 bg-gray-200 rounded-full"></div>
+                      <span>Light Clouds</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <div className="w-3 h-3 bg-gray-400 rounded-full"></div>
+                      <span>Moderate Clouds</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <div className="w-3 h-3 bg-gray-600 rounded-full"></div>
+                      <span>Heavy Clouds</span>
+                    </div>
+                  </div>
+                  <p className="mt-3 text-sm text-gray-600">
+                    🛰️ Live satellite imagery for Tamil Nadu region. Shows cloud coverage and weather systems from space.
+                  </p>
+                </div>
               </div>
-              <div className="mt-4 flex flex-wrap gap-4 text-sm">
-                <div className="flex items-center space-x-2">
-                  <div className="w-3 h-3 bg-white border border-gray-300 rounded-full"></div>
-                  <span>Clear Sky</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <div className="w-3 h-3 bg-gray-200 rounded-full"></div>
-                  <span>Light Clouds</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <div className="w-3 h-3 bg-gray-400 rounded-full"></div>
-                  <span>Moderate Clouds</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <div className="w-3 h-3 bg-gray-600 rounded-full"></div>
-                  <span>Heavy Clouds</span>
-                </div>
-              </div>
-              <p className="mt-3 text-sm text-gray-600">
-                🛰️ Live satellite imagery for Tamil Nadu region. Shows cloud coverage and weather systems from space.
-              </p>
             </div>
           </div>
         </div>
