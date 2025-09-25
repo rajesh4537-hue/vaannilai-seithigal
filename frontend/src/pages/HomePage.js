@@ -358,10 +358,10 @@ const HomePage = () => {
                 </svg>
               </button>
             </div>
-            <div className="p-4 sm:p-6 h-full overflow-auto">
-              {/* Mobile-friendly radar content */}
+            <div className="p-4 sm:p-6 h-full overflow-y-auto max-h-screen"
+                 style={{maxHeight: 'calc(100vh - 80px)'}}>
               <div className="space-y-4">
-                {/* Mobile fallback - Direct link to weather service */}
+                {/* Mobile-friendly radar content */}
                 <div className="block sm:hidden">
                   <div className="bg-gradient-to-br from-blue-50 to-green-50 rounded-lg p-6 text-center">
                     <div className="w-16 h-16 bg-blue-600 rounded-full mx-auto mb-4 flex items-center justify-center relative">
