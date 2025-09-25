@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Search, MapPin, Menu, User, Settings } from 'lucide-react';
 import { locations } from '../data/mockWeatherData';
 
-const Header = ({ onLocationChange }) => {
+const Header = ({ onLocationChange, activeTab, onTabChange }) => {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
