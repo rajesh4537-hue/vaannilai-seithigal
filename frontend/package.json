@@ -62,7 +62,9 @@
   "scripts": {
     "start": "craco start",
     "build": "craco build",
-    "test": "craco test"
+    "test": "craco test --env=jsdom",
+    "test:watch": "craco test --env=jsdom --watchAll=false",
+    "test:coverage": "craco test --env=jsdom --coverage --watchAll=false"
   },
   "browserslist": {
     "production": [
