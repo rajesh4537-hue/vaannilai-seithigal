@@ -194,7 +194,7 @@ const Header = ({ onLocationChange, activeTab, onTabChange, availableCities }) =
       <SettingsModal
         isOpen={isSettingsOpen}
         onClose={() => setIsSettingsOpen(false)}
-        availableCities={locations}
+        availableCities={availableCities || locations}
         onLocationChange={onLocationChange}
       />
     </header>
