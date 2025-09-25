@@ -51,7 +51,7 @@ Download now and stay prepared with Tamil Nadu's most comprehensive weather app!
 Tamil Nadu Weather, வானிலை செய்திகள், India Weather, Monsoon, Cyclone Alert, Agricultural Weather, Chennai Weather, Madurai Weather, Coimbatore Weather, Weather Forecast, IMD Weather, Tamil Weather App
 
 ## Privacy Policy URL
-https://weather-tamilnadu.preview.emergentagent.com/privacy-policy
+https://tamilweatherapp.preview.emergentagent.com/privacy-policy
 
 ## App Icon Requirements
 - High-res icon: 512x512 pixels
