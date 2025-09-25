@@ -152,43 +152,25 @@ const Header = ({ onLocationChange, activeTab, onTabChange, availableCities }) =
                 <div className="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-200 z-50">
                   <div className="py-1">
                     <button 
-                      onClick={() => {
-                        setIsSettingsOpen(true);
-                        setIsMenuOpen(false);
-                      }}
-                      onTouchStart={() => {
-                        setIsSettingsOpen(true);
-                        setIsMenuOpen(false);
-                      }}
-                      className="flex items-center w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors"
+                      onClick={handleSettingsOpen}
+                      onTouchStart={handleSettingsOpen}
+                      className="flex items-center w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors touch-manipulation"
                     >
                       <Settings className="h-4 w-4 mr-3" />
                       Settings
                     </button>
                     <button 
-                      onClick={() => {
-                        setIsSettingsOpen(true);
-                        setIsMenuOpen(false);
-                      }}
-                      onTouchStart={() => {
-                        setIsSettingsOpen(true);
-                        setIsMenuOpen(false);
-                      }}
-                      className="flex items-center w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors"
+                      onClick={handleSettingsOpen}
+                      onTouchStart={handleSettingsOpen}
+                      className="flex items-center w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors touch-manipulation"
                     >
                       <Map className="h-4 w-4 mr-3" />
                       My Locations
                     </button>
                     <button 
-                      onClick={() => {
-                        setIsSettingsOpen(true);
-                        setIsMenuOpen(false);
-                      }}
-                      onTouchStart={() => {
-                        setIsSettingsOpen(true);
-                        setIsMenuOpen(false);
-                      }}
-                      className="flex items-center w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors"
+                      onClick={handleSettingsOpen}
+                      onTouchStart={handleSettingsOpen}
+                      className="flex items-center w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors touch-manipulation"
                     >
                       <Bell className="h-4 w-4 mr-3" />
                       Weather Alerts
