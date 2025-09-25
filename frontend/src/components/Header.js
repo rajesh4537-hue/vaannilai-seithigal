@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Search, MapPin, Menu, User, Settings } from 'lucide-react';
+import { Search, User, MapPin, Settings, Bell, Map } from 'lucide-react';
+import SettingsModal from './SettingsModal';
 import { locations } from '../data/mockWeatherData';
 
 const Header = ({ onLocationChange, activeTab, onTabChange }) => {
