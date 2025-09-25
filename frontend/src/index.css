@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Mobile viewport height fix */
+html, body {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+#root {
+  height: 100%;
+}
+
 /* Custom scrolling styles for better mobile experience */
 .scrollbar-hide {
   -ms-overflow-style: none;  /* Internet Explorer 10+ */
@@ -37,6 +47,22 @@
   max-height: calc(100vh - 80px);
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
+}
+
+/* Mobile content area improvements */
+@media (max-width: 768px) {
+  .mobile-main-content {
+    height: calc(100vh - 140px);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* Ensure body doesn't scroll when modal is open */
+body.modal-open {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
 }
 
 body {
