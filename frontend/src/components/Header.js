@@ -17,10 +17,6 @@ const Header = ({ onLocationChange, activeTab, onTabChange, availableCities }) =
     location.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
-  const filteredLocations = locations.filter(location =>
-    location.toLowerCase().includes(searchQuery.toLowerCase())
-  );
-
   return (
     <header className="bg-white shadow-sm border-b border-gray-200 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
