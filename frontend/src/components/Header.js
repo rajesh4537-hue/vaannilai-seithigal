@@ -7,6 +7,7 @@ const Header = ({ onLocationChange, activeTab, onTabChange }) => {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isSettingsOpen, setIsSettingsOpen] = useState(false);
 
   const handleLocationSelect = (location) => {
     onLocationChange(location);
