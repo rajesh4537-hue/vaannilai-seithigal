@@ -31,8 +31,8 @@ const Header = ({ onLocationChange, activeTab, onTabChange }) => {
             </div>
           </div>
 
-          {/* Navigation */}
-          <nav className="hidden md:flex space-x-8">
+          {/* Navigation - Hidden on Mobile, Visible on Desktop */}
+          <nav className="hidden lg:flex space-x-8">
             <button 
               onClick={() => onTabChange('current')}
               className={`px-3 py-2 text-sm font-medium transition-colors ${
