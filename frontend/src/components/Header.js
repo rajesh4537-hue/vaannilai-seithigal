@@ -143,7 +143,8 @@ const Header = ({ onLocationChange, activeTab, onTabChange, availableCities }) =
             <div className="relative">
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="p-2 text-gray-500 hover:text-blue-600 hover:bg-gray-100 rounded-full transition-colors"
+                onTouchStart={() => setIsMenuOpen(!isMenuOpen)}
+                className="p-2 text-gray-500 hover:text-blue-600 hover:bg-gray-100 rounded-full transition-colors touch-manipulation"
               >
                 <User className="h-5 w-5" />
               </button>
