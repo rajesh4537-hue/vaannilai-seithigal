@@ -312,7 +312,10 @@ const HomePage = () => {
                     <p className="text-sm text-gray-600">Live Satellite</p>
                   </div>
                 </div>
-                <button className="w-full mt-4 py-2 text-sm text-blue-600 hover:text-blue-700 font-medium transition-colors">
+                <button 
+                  onClick={() => setShowSatelliteModal(true)}
+                  className="w-full mt-4 py-2 text-sm text-blue-600 hover:text-blue-700 font-medium transition-colors"
+                >
                   View Satellite
                 </button>
               </div>
