@@ -337,6 +337,112 @@ const HomePage = () => {
         )}
       </main>
 
+      {/* Radar Modal */}
+      {showRadarModal && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
+          <div className="bg-white rounded-xl max-w-4xl w-full max-h-[90vh] overflow-hidden">
+            <div className="flex items-center justify-between p-6 border-b border-gray-200">
+              <h2 className="text-xl font-semibold text-gray-900">Live Weather Radar - Tamil Nadu</h2>
+              <button
+                onClick={() => setShowRadarModal(false)}
+                className="text-gray-400 hover:text-gray-600 transition-colors"
+              >
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+            <div className="p-6">
+              <div className="aspect-video bg-gray-100 rounded-lg overflow-hidden">
+                {/* OpenWeatherMap Radar Layer */}
+                <iframe
+                  src="https://openweathermap.org/weathermap?basemap=map&cities=true&layer=precipitation&lat=11.0168&lon=76.9558&zoom=6"
+                  width="100%"
+                  height="100%"
+                  frameBorder="0"
+                  title="Tamil Nadu Weather Radar"
+                  className="w-full h-full"
+                />
+              </div>
+              <div className="mt-4 flex flex-wrap gap-4 text-sm">
+                <div className="flex items-center space-x-2">
+                  <div className="w-3 h-3 bg-blue-200 rounded-full"></div>
+                  <span>Light Precipitation</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
+                  <span>Moderate Precipitation</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <div className="w-3 h-3 bg-blue-800 rounded-full"></div>
+                  <span>Heavy Precipitation</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <div className="w-3 h-3 bg-purple-600 rounded-full"></div>
+                  <span>Very Heavy Precipitation</span>
+                </div>
+              </div>
+              <p className="mt-3 text-sm text-gray-600">
+                🌧️ Live precipitation data for Tamil Nadu region. Map shows current weather patterns and rainfall intensity.
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Satellite Modal */}
+      {showSatelliteModal && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
+          <div className="bg-white rounded-xl max-w-4xl w-full max-h-[90vh] overflow-hidden">
+            <div className="flex items-center justify-between p-6 border-b border-gray-200">
+              <h2 className="text-xl font-semibold text-gray-900">Live Satellite View - Tamil Nadu</h2>
+              <button
+                onClick={() => setShowSatelliteModal(false)}
+                className="text-gray-400 hover:text-gray-600 transition-colors"
+              >
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+            <div className="p-6">
+              <div className="aspect-video bg-gray-100 rounded-lg overflow-hidden">
+                {/* OpenWeatherMap Satellite Layer */}
+                <iframe
+                  src="https://openweathermap.org/weathermap?basemap=map&cities=true&layer=clouds&lat=11.0168&lon=76.9558&zoom=6"
+                  width="100%"
+                  height="100%"
+                  frameBorder="0"
+                  title="Tamil Nadu Satellite View"
+                  className="w-full h-full"
+                />
+              </div>
+              <div className="mt-4 flex flex-wrap gap-4 text-sm">
+                <div className="flex items-center space-x-2">
+                  <div className="w-3 h-3 bg-white border border-gray-300 rounded-full"></div>
+                  <span>Clear Sky</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <div className="w-3 h-3 bg-gray-200 rounded-full"></div>
+                  <span>Light Clouds</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <div className="w-3 h-3 bg-gray-400 rounded-full"></div>
+                  <span>Moderate Clouds</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <div className="w-3 h-3 bg-gray-600 rounded-full"></div>
+                  <span>Heavy Clouds</span>
+                </div>
+              </div>
+              <p className="mt-3 text-sm text-gray-600">
+                🛰️ Live satellite imagery for Tamil Nadu region. Shows cloud coverage and weather systems from space.
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
+
       {/* Footer */}
       <footer className="bg-white border-t border-gray-200 mt-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
