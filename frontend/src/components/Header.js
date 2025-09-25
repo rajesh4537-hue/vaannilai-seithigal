@@ -15,6 +15,13 @@ const Header = ({ onLocationChange, activeTab, onTabChange, availableCities }) =
     setSearchQuery('');
   };
 
+  const handleSettingsOpen = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setIsSettingsOpen(true);
+    setIsMenuOpen(false);
+  };
+
   const filteredLocations = locations.filter(location =>
     location.toLowerCase().includes(searchQuery.toLowerCase())
   );
