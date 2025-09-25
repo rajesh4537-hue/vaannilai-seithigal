@@ -150,7 +150,7 @@ const Header = ({ onLocationChange, activeTab, onTabChange, availableCities }) =
               </button>
               
               {isMenuOpen && (
-                <div className="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-200 z-50">
+                <div className="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-200 z-50 user-menu-dropdown">
                   <div className="py-1">
                     <button 
                       onClick={handleSettingsOpen}
