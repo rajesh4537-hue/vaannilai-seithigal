@@ -13,7 +13,7 @@ const HourlyForecast = ({ forecast }) => {
         </button>
       </div>
 
-      <div className="overflow-x-auto scrollbar-hide -mx-2 px-2">
+      <div className="touch-scroll -mx-2 px-2">
         <div className="flex space-x-4 pb-2 min-w-max">
           {forecast.map((item, index) => (
             <div key={index} className="flex flex-col items-center space-y-3 flex-shrink-0 p-3 rounded-lg hover:bg-gray-50 transition-colors cursor-pointer min-w-[80px]">
