@@ -192,6 +192,84 @@ const HomePage = () => {
               <TamilNaduInsights currentWeather={currentWeather} />
             </>
           )}
+
+          {/* Radar Tab */}
+          {activeTab === 'radar' && (
+            <>
+              {/* Current Weather - Compact View */}
+              <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-4 shadow-sm">
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center space-x-3">
+                    <MapPin className="h-5 w-5 text-blue-600" />
+                    <h2 className="text-lg font-semibold text-gray-900">{currentWeather.location}</h2>
+                  </div>
+                  <div className="text-right">
+                    <div className="text-3xl font-light text-gray-900">{currentWeather.temperature}°C</div>
+                    <p className="text-sm text-gray-600">{currentWeather.condition}</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Interactive Radar */}
+              <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
+                <h3 className="text-lg font-semibold text-gray-900 mb-4">Weather Radar - Tamil Nadu</h3>
+                <div className="aspect-video bg-gradient-to-br from-blue-50 to-green-50 rounded-lg flex items-center justify-center">
+                  <div className="text-center">
+                    <div className="w-24 h-24 bg-blue-600 rounded-full mx-auto mb-4 flex items-center justify-center relative">
+                      <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center">
+                        <div className="w-8 h-8 bg-blue-600 rounded-full"></div>
+                      </div>
+                      <div className="absolute inset-0 border-4 border-blue-300 rounded-full animate-ping"></div>
+                    </div>
+                    <h4 className="text-lg font-medium text-gray-900 mb-2">Interactive Weather Radar</h4>
+                    <p className="text-sm text-gray-600 mb-4">Live precipitation and weather patterns across Tamil Nadu</p>
+                    <button className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
+                      Launch Full Radar
+                    </button>
+                  </div>
+                </div>
+                <div className="mt-4 grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+                  <div className="flex items-center space-x-2">
+                    <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                    <span>Light Rain</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                    <span>Moderate Rain</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <div className="w-3 h-3 bg-red-500 rounded-full"></div>
+                    <span>Heavy Rain</span>
+                  </div>
+                </div>
+              </div>
+            </>
+          )}
+
+          {/* MinuteCast Tab */}
+          {activeTab === 'minutecast' && (
+            <>
+              {/* Current Weather - Compact View */}
+              <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-4 shadow-sm">
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center space-x-3">
+                    <MapPin className="h-5 w-5 text-blue-600" />
+                    <h2 className="text-lg font-semibold text-gray-900">{currentWeather.location}</h2>
+                  </div>
+                  <div className="text-right">
+                    <div className="text-3xl font-light text-gray-900">{currentWeather.temperature}°C</div>
+                    <p className="text-sm text-gray-600">{currentWeather.condition}</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* MinuteCast - Full Width */}
+              <MinuteCast minuteCast={minuteCast} />
+
+              {/* Hourly Forecast for Context */}
+              <HourlyForecast forecast={hourlyForecast} />
+            </>
+          )}
         </div>
         )}
 
