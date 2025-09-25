@@ -5,26 +5,14 @@ import { locations } from '../data/mockWeatherData';
 
 const Header = ({ onLocationChange, activeTab, onTabChange, availableCities }) => {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
-  const [searchQuery, setSearchQuery] = useState('');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isSettingsOpen, setIsSettingsOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState('');
 
   const handleLocationSelect = (location) => {
     onLocationChange(location);
-    setIsSearchOpen(false);
     setSearchQuery('');
+    setIsSearchOpen(false);
   };
-
-  const handleSettingsOpen = (e) => {
-    e.preventDefault();
-    e.stopPropagation();
-    setIsSettingsOpen(true);
-    setIsMenuOpen(false);
-  };
-
-  const filteredLocations = locations.filter(location =>
-    location.toLowerCase().includes(searchQuery.toLowerCase())
-  );
 
   return (
     <header className="bg-white shadow-sm border-b border-gray-200 sticky top-0 z-50">
