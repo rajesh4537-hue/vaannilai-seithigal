@@ -4,4 +4,5 @@
     <string name="title_activity_main">Vaannilai Seithigal</string>
     <string name="package_name">com.tamilnadu.weather</string>
     <string name="custom_url_scheme">com.tamilnadu.weather</string>
+    <string name="app_description">வானிலை செய்திகள் - Tamil Nadu Weather App</string>
 </resources>
