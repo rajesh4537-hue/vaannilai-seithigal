@@ -189,6 +189,14 @@ const Header = ({ onLocationChange, activeTab, onTabChange }) => {
           </div>
         </div>
       </div>
+
+      {/* Settings Modal */}
+      <SettingsModal
+        isOpen={isSettingsOpen}
+        onClose={() => setIsSettingsOpen(false)}
+        availableCities={locations}
+        onLocationChange={onLocationChange}
+      />
     </header>
   );
 };
