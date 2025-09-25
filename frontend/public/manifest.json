@@ -1,0 +1,82 @@
+{
+  "short_name": "Vaannilai",
+  "name": "Vaannilai Seithigal - Tamil Nadu Weather",
+  "description": "வானிலை செய்திகள் - தமிழ்நாட்டின் முழுமையான வானிலை செயலி. 38 மாவட்டங்களுக்கான துல்லியமான வானிலை தகவல்கள், புயல் எச்சரிக்கைகள், மற்றும் விவசாய ஆலோசனைகள்.",
+  "icons": [
+    {
+      "src": "/icons/icon-72x72.png",
+      "sizes": "72x72",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-128x128.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-152x152.png",
+      "sizes": "152x152",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-384x384.png",
+      "sizes": "384x384",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#3B82F6",
+  "background_color": "#F8FAFC",
+  "orientation": "portrait-primary",
+  "categories": ["weather", "utilities", "news"],
+  "lang": "ta-IN",
+  "scope": "/",
+  "id": "com.tamilnadu.weather",
+  "related_applications": [],
+  "prefer_related_applications": false,
+  "shortcuts": [
+    {
+      "name": "Current Weather",
+      "short_name": "Weather",
+      "description": "View current weather conditions",
+      "url": "/?tab=current",
+      "icons": [{ "src": "/icons/shortcut-weather.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "Districts",
+      "short_name": "Districts", 
+      "description": "View all Tamil Nadu districts weather",
+      "url": "/?tab=districts",
+      "icons": [{ "src": "/icons/shortcut-districts.png", "sizes": "96x96" }]
+    }
+  ]
+}
