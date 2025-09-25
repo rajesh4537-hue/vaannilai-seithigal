@@ -149,6 +149,10 @@ const Header = ({ onLocationChange, activeTab, onTabChange, availableCities }) =
                         setIsSettingsOpen(true);
                         setIsMenuOpen(false);
                       }}
+                      onTouchStart={() => {
+                        setIsSettingsOpen(true);
+                        setIsMenuOpen(false);
+                      }}
                       className="flex items-center w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors"
                     >
                       <Settings className="h-4 w-4 mr-3" />
@@ -159,6 +163,10 @@ const Header = ({ onLocationChange, activeTab, onTabChange, availableCities }) =
                         setIsSettingsOpen(true);
                         setIsMenuOpen(false);
                       }}
+                      onTouchStart={() => {
+                        setIsSettingsOpen(true);
+                        setIsMenuOpen(false);
+                      }}
                       className="flex items-center w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors"
                     >
                       <Map className="h-4 w-4 mr-3" />
@@ -166,6 +174,10 @@ const Header = ({ onLocationChange, activeTab, onTabChange, availableCities }) =
                     </button>
                     <button 
                       onClick={() => {
+                        setIsSettingsOpen(true);
+                        setIsMenuOpen(false);
+                      }}
+                      onTouchStart={() => {
                         setIsSettingsOpen(true);
                         setIsMenuOpen(false);
                       }}
