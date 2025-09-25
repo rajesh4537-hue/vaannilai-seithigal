@@ -225,7 +225,10 @@ const HomePage = () => {
                     </div>
                     <h4 className="text-lg font-medium text-gray-900 mb-2">Interactive Weather Radar</h4>
                     <p className="text-sm text-gray-600 mb-4">Live precipitation and weather patterns across Tamil Nadu</p>
-                    <button className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
+                    <button 
+                      onClick={() => setShowRadarModal(true)}
+                      className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                    >
                       Launch Full Radar
                     </button>
                   </div>
