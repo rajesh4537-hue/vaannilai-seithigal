@@ -461,7 +461,7 @@ const HomePage = () => {
                 </svg>
               </button>
             </div>
-            <div className="p-4 sm:p-6 h-full overflow-y-auto max-h-screen"
+            <div className="modal-content p-4 sm:p-6 mobile-scroll"
                  style={{maxHeight: 'calc(100vh - 80px)'}}>
               <div className="space-y-4">
                 {/* Mobile-friendly satellite content */}
