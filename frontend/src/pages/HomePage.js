@@ -59,6 +59,7 @@ const HomePage = () => {
         onLocationChange={handleLocationChange} 
         activeTab={activeTab}
         onTabChange={setActiveTab}
+        availableCities={availableCities}
       />
 
       {/* Main Content */}
